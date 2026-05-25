@@ -186,4 +186,4 @@ Project ini menggunakan lisensi MIT dan dapat digunakan untuk pembelajaran maupu
 
 ## Developer
 
-Dikembangkan oleh Marcelino.
+Dikembangkan oleh Ludfi Eric Fernando.
