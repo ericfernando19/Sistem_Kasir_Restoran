@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-maroon-50: #fdf2f3;
+    --color-maroon-100: #fce7e8;
+    --color-maroon-200: #f9d0d4;
+    --color-maroon-300: #f4a8ae;
+    --color-maroon-400: #ec7782;
+    --color-maroon-500: #df4a58;
+    --color-maroon-600: #ce2f3f;
+    --color-maroon-700: #a82432;
+    --color-maroon-800: #7B1F24;
+    --color-maroon-900: #6d1e23;
+    --color-maroon-950: #3b0b0f;
+    --color-cream-50: #FFFDF5;
+    --color-cream-100: #FFF8E7;
+    --color-cream-200: #FFF0CC;
+    --color-cream-300: #FFE4A3;
+    --color-cream-400: #FFD16B;
+    --color-cream-500: #FFB830;
+    --color-cream-600: #F59E0B;
+    --color-cream-700: #D97706;
+    --color-cream-800: #B45309;
+    --color-cream-900: #92400E;
+    --color-cream-950: #451A03;
+}
+
+[x-cloak] { display: none !important; }
+
+body {
+    background: #f8fafc;
+}
+
+.print-only {
+    display: none;
+}
+
+@media print {
+    .no-print { display: none !important; }
+    .print-only { display: block !important; }
+    body { background: white; }
+    @page { margin: 0.5cm; }
+}
+
+.status-pending { @apply bg-amber-100 text-amber-800 border border-amber-200; }
+.status-processing { @apply bg-blue-100 text-blue-800 border border-blue-200; }
+.status-ready { @apply bg-emerald-100 text-emerald-800 border border-emerald-200; }
+.status-completed { @apply bg-gray-100 text-gray-700 border border-gray-200; }
+.status-cancelled { @apply bg-rose-100 text-rose-800 border border-rose-200; }
